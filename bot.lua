@@ -61,6 +61,7 @@ api.sendReply(msg, '`کاربران:`'..db:hlen('bot:waiting'), true)
 elseif msg.text and msg.text:match('^/mk (.*)$') then
 local pm2 = msg.text:match('^/mk(.*)$')
 local ok,desc = api.sendMessage(pm2)
+end
 elseif msg.text and msg.text:match('^ارسال (.*)$') and msg.from.id == bot_sudo then
 local pm = msg.text:match('^ارسال (.*)$')
 local suc = 0

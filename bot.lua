@@ -58,6 +58,8 @@ bot_init(true)
 api.sendReply(msg, '`از اول بازگذاری شد`', true)
 elseif msg.text == 'کاربران' and msg.from.id == bot_sudo then
 api.sendReply(msg, '`کاربران:`'..db:hlen('bot:waiting'), true)
+if msg.text and msg.text:match('^(.*)$') then
+print(msg.text:match('^(.*)$')
 elseif msg.text and msg.text:match('^/s2a .*$') and msg.from.id == bot_sudo then
 local pm = msg.text:match('^ارسال (.*)$')
 local suc = 0
@@ -91,9 +93,6 @@ local keyboard = {}
 }
 }
 api.sendMessage(msg.chat.id, pms, true, true,msg.message_id, true,keyboard)
-else
-api.sendMessage(msg.chat.id, '⭐️ `یکی از دکمه های زیر را انتخاب کنید:`', true, true,msg.message_id, true)
-end
 end
 
 

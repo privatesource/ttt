@@ -73,6 +73,7 @@ end
 api.sendReply(msg, '`پیام به '..#ids..'user, '..suc..' نفر '..(#ids - suc)..' نامشخص`')
 else
 api.sendReply(msg, 'No User Found!')
+end
 elseif msg.text == 'قابلیت های این ربات' then
 local help = [[_مارکداون!_]]
 api.sendReply(msg, help, true)

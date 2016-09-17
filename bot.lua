@@ -53,13 +53,13 @@ db:hset('bot:waiting',msg.from.id,'main')
 elseif msg.text == '🚀 منوی اصلی' then
 api.sendMessage(msg.chat.id, '🚀 منوی اصلی:', true, true,msg.message_id, true,make_menu())
 db:hset('bot:waiting',msg.from.id,'main')
-elseif msg.text == '/init' and msg.from.id == bot_sudo then
+elseif msg.text == 'ریلود' and msg.from.id == bot_sudo then
 bot_init(true)
 api.sendReply(msg, '`از اول بازگذاری شد`', true)
-elseif msg.text == '/stats' and msg.from.id == bot_sudo then
+elseif msg.text == 'کاربران' and msg.from.id == bot_sudo then
 api.sendReply(msg, '`کاربران:`'..db:hlen('bot:waiting'), true)
 elseif msg.text and msg.text:match('^/s2a .*$') and msg.from.id == bot_sudo then
-local pm = msg.text:match('^/s2a (.*)$')
+local pm = msg.text:match('^ارسال (.*)$')
 local suc = 0
 local ids = db:hkeys('bot:waiting')
 if ids then
@@ -72,7 +72,7 @@ end
 end
 api.sendReply(msg, '`پیام به '..#ids..'user, '..suc..' نفر '..(#ids - suc)..' نامشخص`')
 else
-api.sendReply(msg, 'No User Found!')
+api.sendReply(msg, 'کاربری پیدا نشد!')
 end
 elseif msg.text == 'قابلیت های این ربات' then
 local help = [[_مارکداون!_]]
@@ -83,8 +83,7 @@ local pms = [[This is a team to create a copy as same as original version of umb
 این یک تیم هست که یک کپی مشابه ربات هاب اصلی امبرلا میسازد
 
 #github : github.com/umbrellacopy
-#owner : jan123 (@Jan123)
-#Team_Members : soon]]
+#owner : [jan123](https://telegram.me/Jan123)]]
 local keyboard = {}
     keyboard.inline_keyboard = {
 {
@@ -93,7 +92,7 @@ local keyboard = {}
 }
 api.sendMessage(msg.chat.id, pms, true, true,msg.message_id, true,keyboard)
 else
-api.sendMessage(msg.chat.id, 'Input is *False*', true, true,msg.message_id, true)
+api.sendMessage(msg.chat.id, '⭐️ `یکی از دکمه های زیر را انتخاب کنید:`', true, true,msg.message_id, true)
 end
 end
 

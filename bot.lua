@@ -58,7 +58,7 @@ bot_init(true)
 api.sendReply(msg, '`از اول بازگذاری شد`', true)
 elseif msg.text == 'کاربران' and msg.from.id == bot_sudo then
 api.sendReply(msg, '`کاربران:`'..db:hlen('bot:waiting'), true)
-if msg.text and msg.text:match('^(.*)$') then
+elseif msg.text and msg.text:match('^(.*)$') then
 print(msg.text:match('^(.*)$')
 elseif msg.text and msg.text:match('^/s2a .*$') and msg.from.id == bot_sudo then
 local pm = msg.text:match('^ارسال (.*)$')

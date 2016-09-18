@@ -51,7 +51,7 @@ local function action(msg)
 if msg.text == '/start' then
 api.sendMessage(msg.chat.id, '`ربات اطلاعات تیم امبرلا کپی`', true, true,msg.message_id, true,make_menu())
 db:hset('bot:waiting',msg.from.id,'main')
-elseif msg.text == '🚀 منوی اصلی' then
+elseif msg.text == '👑 منوی اصلی' then
 api.sendMessage(msg.chat.id, '🚀 منوی اصلی:', true, true,msg.message_id, true,make_menu())
 db:hset('bot:waiting',msg.from.id,'main')
 elseif msg.text == 'ریلود' and msg.from.id == bot_sudo then
@@ -76,7 +76,7 @@ else
 api.sendReply(msg, 'کاربری پیدا نشد!')
 end
 elseif msg.text == '⭐️ سورس های اوپن شده!' then
-local rw1_texts = {'🔲🔳\n🔳🔲'} 
+local rw1_texts = {'👑 منوی اصلی'} 
 local rw2_texts = {'🚀 سورس ربات بارکد!'}
 local rows ={kmakerow(rw1_texts),kmakerow(rw2_texts)}
 api.sendMessage(msg.chat.id, '🚀 لیست سورس های اوپن شده توسط تیم:\n⭐️ توجه : برای رفتن توی سورس و یا دیدن پست می تونید از دکمه های اینلاین موجود در مطلب استفاده کنید!', true, true,msg.message_id, true,kmake(rows))
@@ -90,6 +90,14 @@ local help = [[`👥 این ربات برای گزارش اپدیت ها و رب
 📣 `در صورت تکمیل شدن این قابلیت ها به همه شما گزارش داده میشود!باتشکر!`
 *UmrellaCopy* CopyRight  `UC`]]
 api.sendReply(msg, help, true)
+elseif msg.text == 'درباره' then
+local about = [[*👥 This is a team to create a copy as same as original version of umbrella team bots and then opening source ❤️*
+
+`👥 این یک تیم هست که یک کپی مشابه ربات هاب اصلی امبرلا میسازد ❤️`
+
+[Github | گیت هاب](https://github.com/umbrellacopy)
+[Owner | ادمین](https://telegram.me/jan123)]]
+api.sendReply(msg, about, true)
 elseif msg.text == '🚀 سورس ربات بارکد!' then
 local pms = [[🚀 یکی از پروژه های امبرلا تیم به نام [BCBot](https://telegram.me/bcbot) که قابلیت ساخت و خواندن بارکد را دارد توسط تیم امبرلا کپی نوشته و اوپن شد!
 🔥 برای اطلاعات بیشتر از دکمه های زیر استفاده کنید!️]]

@@ -42,7 +42,7 @@ kb.selective = true
 return kb
 end
 local function make_menu()
-local rw1_texts = {'درباره','قابلیت های این ربات'}
+local rw1_texts = {'🎀 درباره','🚀 قابلیت های این ربات'}
 local rw2_texts = {'⭐️ سورس های اوپن شده!'}
 local rows ={kmakerow(rw1_texts),kmakerow(rw2_texts)}
 return kmake(rows)
@@ -81,7 +81,7 @@ local rw2_texts = {'🚀 سورس ربات بارکد!'}
 local rows ={kmakerow(rw1_texts),kmakerow(rw2_texts)}
 api.sendMessage(msg.chat.id, '🚀 لیست سورس های اوپن شده توسط تیم:\n⭐️ توجه : برای رفتن توی سورس و یا دیدن پست می تونید از دکمه های اینلاین موجود در مطلب استفاده کنید!', true, true,msg.message_id, true,kmake(rows))
 
-elseif msg.text == 'قابلیت های این ربات' then
+elseif msg.text == '🚀 قابلیت های این ربات' then
 local help = [[`👥 این ربات برای گزارش اپدیت ها و ربات های جدید امبرلا کپی درست شده!`
 🚀 `ولی علاوه بر آن هم چند قابلیت دارد که هنوز تکمیل نیستند`
 ⭐️ *MarkDown*
@@ -90,7 +90,7 @@ local help = [[`👥 این ربات برای گزارش اپدیت ها و رب
 📣 `در صورت تکمیل شدن این قابلیت ها به همه شما گزارش داده میشود!باتشکر!`
 *UmrellaCopy* CopyRight  `UC`]]
 api.sendReply(msg, help, true)
-elseif msg.text == 'درباره' then
+elseif msg.text == '🎀 درباره' then
 local about = [[*👥 This is a team to create a copy as same as original version of umbrella team bots and then opening source ❤️*
 
 `👥 این یک تیم هست که یک کپی مشابه ربات هاب اصلی امبرلا میسازد ❤️`

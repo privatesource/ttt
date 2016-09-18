@@ -86,7 +86,7 @@ local pms = [[👥 This is a team to create a copy as same as original version o
 
 👥 این یک تیم هست که یک کپی مشابه ربات هاب اصلی امبرلا میسازد ❤️
 
-🎀 برای دریافت لیست اعضا, "اعضا" را ارسال کنید]]
+🎀 اعضا
 local keyboard = {}
     keyboard.inline_keyboard = {
 {

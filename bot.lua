@@ -58,8 +58,6 @@ bot_init(true)
 api.sendReply(msg, '`از اول بازگذاری شد`', true)
 elseif msg.text == 'کاربران' and msg.from.id == bot_sudo then
 api.sendReply(msg, '`کاربران:`'..db:hlen('bot:waiting'), true)
-elseif msg.text and msg.text:match('^/mk (.*)$') then
-api.sendReply(msg.text:match('^/mk (.*)$'))
 elseif msg.text and msg.text:match('^ارسال .*$') and msg.from.id == bot_sudo then
 local pm = msg.text:match('^ارسال (.*)$')
 local suc = 0
@@ -77,9 +75,13 @@ else
 api.sendReply(msg, 'کاربری پیدا نشد!')
 end
 elseif msg.text == 'قابلیت های این ربات' then
-local help = [[`مارکداون!`
-`/mk [Text]`
-`CopyRight UmbrellaCopy`]]
+local help = [[`👥 این ربات برای گزارش اپدیت ها و ربات های جدید امبرلا کپی درست شده!`
+🚀 `ولی علاوه بر آن هم چند قابلیت دارد که هنوز تکمیل نیستند`
+⭐️ *MarkDown*
+⭐️ *Echo*
+⭐️ *Send To Channel*
+📣 `در صورت تکمیل شدن این قابلیت ها به همه شما گزارش داده میشود!باتشکر!
+*UmrellaCopy* -> `UC`]]
 api.sendReply(msg, help, true)
 elseif msg.text == 'درباره' then
 local pms = [[👥 This is a team to create a copy as same as original version of umbrella team bots and then opening source ❤️

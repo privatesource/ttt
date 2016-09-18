@@ -90,13 +90,13 @@ local pms = [[👥 This is a team to create a copy as same as original version o
 local keyboard = {}
     keyboard.inline_keyboard = {
 {
-{text = '🚀 کانال', url = 'https://telegram.me/umbrellacopy'},
+{text = "🚀 کانال", url = 'https://telegram.me/umbrellacopy'},
 },
 {
-{text = '⭐️ گیت هاب | استار دادن فراموش نشه!', url = 'https:/github.com/umbrellacopy'},
+{text = "⭐️ گیت هاب | استار دادن فراموش نشه!", url = 'https:/github.com/umbrellacopy'},
 },
 {
-{text = '👑 ادمین', url = 'https://telegram.me/jan123'}
+{text = "👑 ادمین", url = 'https://telegram.me/jan123'}
 }
 }
 api.sendMessage(msg.chat.id, pms, true, true,msg.message_id, true,keyboard)
@@ -130,6 +130,7 @@ local keyboard = {}
 }
 }
 api.sendMessage(msg.chat.id, pms, true, true,msg.message_id, true,keyboard)
+end
 end
 end
 

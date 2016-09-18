@@ -82,12 +82,47 @@ local help = [[`مارکداون!`
 `CopyRight UmbrellaCopy`]]
 api.sendReply(msg, help, true)
 elseif msg.text == 'درباره' then
-local pms = [[This is a team to create a copy as same as original version of umbrella team bots and then opening source ❤️
+local pms = [[👥 This is a team to create a copy as same as original version of umbrella team bots and then opening source ❤️
 
-این یک تیم هست که یک کپی مشابه ربات هاب اصلی امبرلا میسازد
+👥 این یک تیم هست که یک کپی مشابه ربات هاب اصلی امبرلا میسازد ❤️
 
-#github : github.com/umbrellacopy
-#owner : [jan123](https://telegram.me/Jan123)]]
+🎀 برای دریافت لیست اعضا, "اعضا" را ارسال کنید]]
+local keyboard = {}
+    keyboard.inline_keyboard = {
+{
+{text = '🚀 کانال', url = 'https://telegram.me/umbrellacopy'},
+},
+{
+{text = '⭐️ گیت هاب | استار دادن فراموش نشه!', url = 'https:/github.com/umbrellacopy'},
+},
+{
+{text = '👑 ادمین', url = 'https://telegram.me/jan123'}
+}
+}
+api.sendMessage(msg.chat.id, pms, true, true,msg.message_id, true,keyboard)
+end
+elseif msg.text == 'اعضا' then
+local pms = [[@Arian713 
+@XDeadKingX 
+@shayan123hacker 
+@Apple_VPN 
+@Apple_VPN 
+@Mosydev 
+@Pro_Dev 
+@aWmiR_Ho3iN 
+@Pho3nix 
+@ShopBuy 
+@XMrdevX 
+@Amir_h 
+@pro_poker 
+@HEXTOR 
+@Forbidguy 
+😠 <R>ez</a> 😠 
+@XxX_Developer_XxX 
+‌Abolfazl 
+@MutePuker 
+@Mehti_051 
+@Inpoker]]
 local keyboard = {}
     keyboard.inline_keyboard = {
 {

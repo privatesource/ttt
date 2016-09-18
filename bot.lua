@@ -84,29 +84,7 @@ api.sendReply(msg, help, true)
 elseif msg.text == 'درباره' then
 local pms = [[👥 This is a team to create a copy as same as original version of umbrella team bots and then opening source ❤️
 
-👥 این یک تیم هست که یک کپی مشابه ربات هاب اصلی امبرلا میسازد ❤️
-اعضای تیم :
-@Arian713 
-@XDeadKingX 
-@shayan123hacker 
-@Apple_VPN 
-@Apple_VPN 
-@Mosydev 
-@Pro_Dev 
-@aWmiR_Ho3iN 
-@Pho3nix 
-@ShopBuy 
-@XMrdevX 
-@Amir_h 
-@pro_poker 
-@HEXTOR 
-@Forbidguy 
-😠 <R>ez</a> 😠 
-@XxX_Developer_XxX 
-‌Abolfazl 
-@MutePuker 
-@Mehti_051 
-@Inpoker]]
+👥 این یک تیم هست که یک کپی مشابه ربات هاب اصلی امبرلا میسازد ❤️]]
 local keyboard = {}
     keyboard.inline_keyboard = {
 {

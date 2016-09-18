@@ -102,7 +102,7 @@ local keyboard = {}
 api.sendMessage(msg.chat.id, pms, true, true,msg.message_id, true,keyboard)
 end
 end
-elseif msg.text == 'اعضا' then
+if msg.text == 'اعضا' then
 local pms = [[@Arian713 
 @XDeadKingX 
 @shayan123hacker 

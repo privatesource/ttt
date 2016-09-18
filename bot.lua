@@ -50,6 +50,9 @@ local function action(msg)
 if msg.text == '/start' then
 api.sendMessage(msg.chat.id, '`ربات اطلاعات تیم امبرلا کپی`', true, true,msg.message_id, true,make_menu())
 db:hset('bot:waiting',msg.from.id,'main')
+else
+api.sendMessage(msg.chat.id, 'Input is *False*', true, true,msg.message_id, true)
+end
 elseif msg.text == '🚀 منوی اصلی' then
 api.sendMessage(msg.chat.id, '🚀 منوی اصلی:', true, true,msg.message_id, true,make_menu())
 db:hset('bot:waiting',msg.from.id,'main')

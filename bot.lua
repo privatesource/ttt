@@ -43,7 +43,8 @@ return kb
 end
 local function make_menu()
 local rw1_texts = {'درباره','قابلیت های این ربات'}
-local rows ={kmakerow(rw1_texts)}
+local rw2_texts = {'⭐️ سورس های اوپن شده!'}
+local rows ={kmakerow(rw1_texts),kmakerow(rw2_texts)}
 return kmake(rows)
 end
 local function action(msg)
@@ -77,6 +78,16 @@ api.sendReply(msg, '`پیام به '..#ids..'user, '..suc..' نفر '..(#ids - s
 else
 api.sendReply(msg, 'کاربری پیدا نشد!')
 end
+else
+local setup = db:hget('bot:waiting',msg.from.id)
+if setup == 'main' then
+if msg.text == '⭐️ سورس های اوپن شده!' then
+local rw1_texts = {'🔲🔳\n🔳🔲'} 
+local rw2_texts = {'🚀 سورس ربات بارکد!'}
+local rows ={kmakerow(rw1_texts),kmakerow(rw2_texts)}
+api.sendMessage(msg.chat.id, '🚀 لیست سورس های اوپن شده توسط تیم:\n⭐️ توجه : برای رفتن توی سورس و یا دیدن پست می تونید از دکمه های اینلاین موجود در مطلب استفاده کنید!', true, true,msg.message_id, true,kmake(rows))
+db:hset('bot:waiting',msg.from.id,'opnsouce')
+
 elseif msg.text == 'قابلیت های این ربات' then
 local help = [[`👥 این ربات برای گزارش اپدیت ها و ربات های جدید امبرلا کپی درست شده!`
 🚀 `ولی علاوه بر آن هم چند قابلیت دارد که هنوز تکمیل نیستند`
@@ -86,20 +97,19 @@ local help = [[`👥 این ربات برای گزارش اپدیت ها و رب
 📣 `در صورت تکمیل شدن این قابلیت ها به همه شما گزارش داده میشود!باتشکر!`
 *UmrellaCopy* CopyRight  `UC`]]
 api.sendReply(msg, help, true)
+elseif msg.text == '🚀 سورس ربات بارکد!' then
+local help = [[]]
+api.sendReply(msg, help, true)
 elseif msg.text == 'درباره' then
-local pms = [[👥 This is a team to create a copy as same as original version of umbrella team bots and then opening source ❤️
-
-👥 این یک تیم هست که یک کپی مشابه ربات هاب اصلی امبرلا میسازد ❤️]]
+local pms = [[🚀 یکی از پروژه های امبرلا تیم به نام [BCBot](https://telegram.me/bcbot) که قابلیت ساخت و خواندن بارکد را دارد توسط تیم امبرلا کپی نوشته و اوپن شد!
+🔥 برای اطلاعات بیشتر از دکمه های زیر استفاده کنید!️]]
 local keyboard = {}
     keyboard.inline_keyboard = {
 {
-{text = "🚀 کانال", url = 'https://telegram.me/umbrellacopy'},
+{text = "🔥 دیدن این پست در کانال", url = 'https://telegram.me/UmbrellaCopy/11'},
 },
 {
-{text = "⭐️ گیت هاب | استار دادن فراموش نشه!", url = 'https://github.com/umbrellacopy'},
-},
-{
-{text = "👑 ادمین", url = 'https://telegram.me/jan123'}
+{text = "⭐️ سورس این ربات در گیت هاب", url = 'https://github.com/umbrellacopy'}
 }
 }
 api.sendMessage(msg.chat.id, pms, true, true,msg.message_id, true,keyboard)

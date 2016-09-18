@@ -57,6 +57,10 @@ db:hset('bot:waiting',msg.from.id,'main')
 elseif msg.text == 'ریلود' and msg.from.id == bot_sudo then
 bot_init(true)
 api.sendReply(msg, '`از اول بازگذاری شد`', true)
+elseif msg.text:match("^/italic (.*)") then
+local matches = { string.match(msg.text, "^/italic (.*)") }
+local text = '_'..matches[1]..'_'
+sendMessage(msg.chat.id, text, true, false, true)
 elseif msg.text == 'کاربران' and msg.from.id == bot_sudo then
 api.sendReply(msg, '`کاربران:`'..db:hlen('bot:waiting'), true)
 elseif msg.text and msg.text:match('^ارسال .*$') and msg.from.id == bot_sudo then

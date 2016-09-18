@@ -75,15 +75,11 @@ api.sendReply(msg, '`پیام به '..#ids..'user, '..suc..' نفر '..(#ids - s
 else
 api.sendReply(msg, 'کاربری پیدا نشد!')
 end
-else
-local setup = db:hget('bot:waiting',msg.from.id)
-if setup == 'main' then
-if msg.text == '⭐️ سورس های اوپن شده!' then
+elseif msg.text == '⭐️ سورس های اوپن شده!' then
 local rw1_texts = {'🔲🔳\n🔳🔲'} 
 local rw2_texts = {'🚀 سورس ربات بارکد!'}
 local rows ={kmakerow(rw1_texts),kmakerow(rw2_texts)}
 api.sendMessage(msg.chat.id, '🚀 لیست سورس های اوپن شده توسط تیم:\n⭐️ توجه : برای رفتن توی سورس و یا دیدن پست می تونید از دکمه های اینلاین موجود در مطلب استفاده کنید!', true, true,msg.message_id, true,kmake(rows))
-db:hset('bot:waiting',msg.from.id,'opnsouce')
 
 elseif msg.text == 'قابلیت های این ربات' then
 local help = [[`👥 این ربات برای گزارش اپدیت ها و ربات های جدید امبرلا کپی درست شده!`
@@ -95,9 +91,6 @@ local help = [[`👥 این ربات برای گزارش اپدیت ها و رب
 *UmrellaCopy* CopyRight  `UC`]]
 api.sendReply(msg, help, true)
 elseif msg.text == '🚀 سورس ربات بارکد!' then
-local help = [[]]
-api.sendReply(msg, help, true)
-elseif msg.text == 'درباره' then
 local pms = [[🚀 یکی از پروژه های امبرلا تیم به نام [BCBot](https://telegram.me/bcbot) که قابلیت ساخت و خواندن بارکد را دارد توسط تیم امبرلا کپی نوشته و اوپن شد!
 🔥 برای اطلاعات بیشتر از دکمه های زیر استفاده کنید!️]]
 local keyboard = {}

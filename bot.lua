@@ -80,8 +80,8 @@ local help = [[`👥 این ربات برای گزارش اپدیت ها و رب
 ⭐️ *MarkDown*
 ⭐️ *Echo*
 ⭐️ *Send To Channel*
-📣 `در صورت تکمیل شدن این قابلیت ها به همه شما گزارش داده میشود!باتشکر!
-*UmrellaCopy* -> `UC`]]
+📣 `در صورت تکمیل شدن این قابلیت ها به همه شما گزارش داده میشود!باتشکر!`
+*UmrellaCopy* CopyRight  `UC`]]
 api.sendReply(msg, help, true)
 elseif msg.text == 'درباره' then
 local pms = [[👥 This is a team to create a copy as same as original version of umbrella team bots and then opening source ❤️

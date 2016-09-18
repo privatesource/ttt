@@ -78,8 +78,8 @@ api.sendReply(msg, 'کاربری پیدا نشد!')
 end
 elseif msg.text == 'قابلیت های این ربات' then
 local help = [[`مارکداون!`
-/mk [Text]
-CopyRight UmbrellaCopy]]
+`/mk [Text]`
+`CopyRight UmbrellaCopy`]]
 api.sendReply(msg, help, true)
 elseif msg.text == 'درباره' then
 local pms = [[This is a team to create a copy as same as original version of umbrella team bots and then opening source ❤️
@@ -96,7 +96,7 @@ local keyboard = {}
 }
 api.sendMessage(msg.chat.id, pms, true, true,msg.message_id, true,keyboard)
 end
-
+end
 
 return {
 action = action,

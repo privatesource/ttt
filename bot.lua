@@ -87,23 +87,7 @@ local pms = [[👥 This is a team to create a copy as same as original version o
 👥 این یک تیم هست که یک کپی مشابه ربات هاب اصلی امبرلا میسازد ❤️
 
 🎀 اعضا
-local keyboard = {}
-    keyboard.inline_keyboard = {
-{
-{text = "🚀 کانال", url = 'https://telegram.me/umbrellacopy'},
-},
-{
-{text = "⭐️ گیت هاب | استار دادن فراموش نشه!", url = 'https:/github.com/umbrellacopy'},
-},
-{
-{text = "👑 ادمین", url = 'https://telegram.me/jan123'}
-}
-}
-api.sendMessage(msg.chat.id, pms, true, true,msg.message_id, true,keyboard)
-end
-end
-if msg.text == 'اعضا' then
-local pms = [[@Arian713 
+@Arian713 
 @XDeadKingX 
 @shayan123hacker 
 @Apple_VPN 
@@ -127,7 +111,13 @@ local pms = [[@Arian713
 local keyboard = {}
     keyboard.inline_keyboard = {
 {
-{text = "کانال" , url = 'https://telegram.me/UmbrellaCopy'}
+{text = "🚀 کانال", url = 'https://telegram.me/umbrellacopy'},
+},
+{
+{text = "⭐️ گیت هاب | استار دادن فراموش نشه!", url = 'https:/github.com/umbrellacopy'},
+},
+{
+{text = "👑 ادمین", url = 'https://telegram.me/jan123'}
 }
 }
 api.sendMessage(msg.chat.id, pms, true, true,msg.message_id, true,keyboard)
